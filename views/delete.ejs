@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+<section class="todo-container">
+    <h2>Are you sure you want to delete this task?</h2>
+    <ul class="todo-list">
+        <li class="todo-list-item">
+            <div class="todo-list-item-title"> <%= task.title %> </div>
+            <div class="todo-list-item-content"> <%= task.content %> </div>
+         </li>
+    </ul>
+    
+    
+    <form action="/removeConfirmed/<%= task._id %>" method="GET">
+        <button type="submit" class="confirm">Confirm</button>
+        <a href="/" class="cancel">Cancel</a>
+    </form>
+</section>
